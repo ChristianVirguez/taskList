@@ -1,6 +1,6 @@
 
 footer{
-    background-color: lightblue;
+    background: #FAF9F7;
     height: min-content;
     padding: 4px;
     
@@ -8,6 +8,4 @@ footer{
 
     font: italic;
     font-weight: bolder;
-    font-size: 1.4rem;
-
 }

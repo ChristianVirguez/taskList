@@ -1,11 +1,11 @@
 header{
-    background-color: rgb(255, 253, 253);
+    background: #FAF9F7;
+
     padding: 4px;
 
     display: flex;
     height: 80px;
 
-    box-shadow: 0px .1em 4em .1em rgb(202, 201, 201);
 }
 
 .logo{
@@ -42,10 +42,20 @@ header{
     justify-content: space-between;
 }
 
+
+
 .link-box a{
     text-decoration: none;
-    color: rgb(64, 64, 110);
+    color: #344049;
 } 
+
+.link-box a:hover{
+    color: #8A9070;
+}
+
+.link-box a:active{
+    color: #6F745A;
+}
 
 /* 
 sm: 640px

@@ -1,5 +1,6 @@
 
 .home-content{
+    background: #FAF9F7;
 
     width: 100vw;
     height: 100vh;
@@ -7,6 +8,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    color: #344049;
 }
 
 .home-box{
@@ -20,20 +23,22 @@
     justify-content: center;
 
     font-size: 1.5rem;
-}
 
-.home-box p{
+    & p{
     margin: 0;
     padding: 4px 18px;
     font-size: 1.3rem;
-    
-}
+    }
 
-.button-box{
+    & .button-box{
     margin: 18px;
     display: flex;
     justify-content: space-evenly;
+    }
 }
+
+
+
 
 
 

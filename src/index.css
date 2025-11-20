@@ -13,9 +13,9 @@
 }
 
 body {
+  background: #FAF9F7;
   margin: 0;
   display: flex;
   width: 100vw;
   height: 100vh;
-  /* background-color: lightsteelblue; */
 }
