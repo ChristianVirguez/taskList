@@ -1,0 +1,13 @@
+
+footer{
+    background-color: lightblue;
+    height: min-content;
+    padding: 4px;
+    
+    text-align: center;
+
+    font: italic;
+    font-weight: bolder;
+    font-size: 1.4rem;
+
+}

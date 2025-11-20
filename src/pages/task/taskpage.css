@@ -1,0 +1,135 @@
+
+.task-list-container{
+    outline: 2px solid;
+
+    width: 800px;
+    height: max-content;
+    padding:12px 28px;
+
+    border-radius: 12px;
+
+    display: flex;
+    flex-flow: column;
+    font-size: 1.2rem;
+
+    box-shadow: 0px 0px 20px 2px lightslategray;
+}
+
+.table-task-box{
+    /* background-color: red; */
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+.tr-table{
+    outline: 2px solid;
+    border-radius: 8px;
+}
+
+.tbody-table{
+    width: 700px;
+    display: flex;
+    flex-flow: column;
+    gap: 18px;
+}
+
+.tbody-table td{
+    padding: 18px;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 18px;
+}
+
+.td-info-task{
+    width: 450px;
+    border-right: 2px solid;
+}
+
+.info-task-box{
+    height: 200px;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+.info-task-box h3,
+.info-task-box p{
+    margin: 0;
+}
+
+.complete{
+    padding: 8px;
+    border-radius: 18px;
+    width: fit-content;
+    background-color: rgba(72, 255, 0, 0.404);
+    outline: 2px solid;
+}
+
+.pending{
+    margin: 4px;
+    text-align: center;
+    display: block;
+    border-radius: 18px;
+    width: 120px;
+    background-color: rgba(240, 253, 117, 0.767);
+    outline: 2px solid;
+}
+
+.cel-container{
+    width: 150px;
+    height: 200px;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+}
+
+
+.td-option{
+    width: 150px;
+}
+
+.delete-botton{
+    height: 40px;
+    width: 100px;
+    background-color: rgb(0, 153, 255);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+
+.delete-botton:hover{
+    background-color: rgb(0, 103, 172);
+    color: white;
+    border: none;
+    border-radius: 12px;
+}
+
+.delete-botton:active{
+    background-color: rgb(0, 60, 100);
+    color: white;
+    border: none;
+    border-radius: 12px;
+}
+.radio-container{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.hiden{
+    display: none;
+}
+
+.info{
+    padding: 4px;
+}

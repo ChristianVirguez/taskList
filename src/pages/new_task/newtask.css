@@ -1,0 +1,154 @@
+
+.newtask-container{
+    width: 700px;
+    height: max-content;
+    padding: 18px;
+
+    border-radius: 12px;
+
+    display: flex;
+    flex-flow: column;
+    font-size: 1.2rem;
+
+    box-shadow: 0px 0px 20px 2px lightslategray;
+}
+
+.newtask-container h2{
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.newtask-container p{
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.box-input{
+    height: 100%;
+
+    padding: 8px;
+
+    display: flex;
+    flex-flow: column;
+}
+
+.box-input .task-title,
+.box-input .task-description,
+.box-input .task-date-expiration{
+    padding: 18px;
+
+    display: flex;
+    flex-flow: column;
+}
+
+.task-title{
+    height: 80px;
+
+    display: flex;
+    flex-flow: column;
+    gap: 14px;
+}
+
+.task-title input{
+    padding: 14px;
+    border-radius: 8px;
+    border: none;
+    outline: 2px solid lightgrey;
+    font-size: 1.2rem;
+
+}
+
+.task-description{
+    height: 180px;
+    display: flex;
+    flex-flow: column;
+    gap: 14px;
+}
+
+.task-description #description{
+    height: 70%;
+
+    border-radius: 8px;
+    border: none;
+    outline: 2px solid lightgrey;
+    font-size: 1.2rem;
+}
+
+.task-date-expiration{
+    display: flex;
+    flex-flow: column;
+    gap: 14px;
+}
+
+
+.task-date-expiration input{
+    padding: 14px;
+    border-radius: 8px;
+    border: none;
+    outline: 2px solid lightgrey;
+    font-size: 1.2rem;
+
+}
+
+
+/* button */
+
+.box-button{
+    display: flex;
+    justify-content: flex-end;
+    gap: 18px;
+    
+}
+
+.box-button :nth-child(1){
+    width: 100px;
+    height: 50px;
+    background-color: white;
+    color: black;
+    border: none;
+    outline: 2px solid rgb(186, 194, 202);
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.box-button :nth-child(2){
+    width: 100px;
+    background-color: rgb(0, 153, 255);
+    outline: 1px solid rgb(221, 221, 221);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    color: white;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+}
+
+.box-button :nth-child(1):hover{
+    background-color: rgb(0, 103, 172);
+    color: white;
+    border: none;
+    border-radius: 12px;
+}
+
+.box-button :nth-child(2):hover{
+    background-color: rgb(0, 103, 172);
+    color: white;
+    border: none;
+    border-radius: 12px;
+}
+
+.box-button :nth-child(1):active{
+    background-color: rgb(0, 60, 100);
+    color: white;
+    border: none;
+    border-radius: 12px;
+}
+.box-button :nth-child(2):active{
+    background-color: rgb(0, 60, 100);
+    color: white;
+    border: none;
+    border-radius: 12px;
+}
