@@ -48,7 +48,7 @@ function NewTask(){
     return (
         <>
             <div className="newtask-container">
-                <h2>Agregar Nueva Tarea</h2>
+                <h2>Agregar nueva tarea</h2>
                 <p>Complea los siguientes campos para crear tu nueva tarea</p>
 
                 <form className="box-input" onSubmit={handleSubmit}>

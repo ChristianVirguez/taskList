@@ -1,7 +1,8 @@
 
 .newtask-container{
+    background: #FAF9F7;
     width: 700px;
-    height: max-content;
+    height: 100vh;
     padding: 18px;
 
     border-radius: 12px;
@@ -9,8 +10,6 @@
     display: flex;
     flex-flow: column;
     font-size: 1.2rem;
-
-    box-shadow: 0px 0px 20px 2px lightslategray;
 }
 
 .newtask-container h2{
@@ -30,19 +29,20 @@
 
     display: flex;
     flex-flow: column;
+    justify-content: space-evenly;
 }
 
 .box-input .task-title,
 .box-input .task-description,
 .box-input .task-date-expiration{
-    padding: 18px;
 
     display: flex;
     flex-flow: column;
+    text-align: start;
 }
 
 .task-title{
-    height: 80px;
+    height: 110px;
 
     display: flex;
     flex-flow: column;
@@ -72,6 +72,7 @@
     border: none;
     outline: 2px solid lightgrey;
     font-size: 1.2rem;
+    resize: none;
 }
 
 .task-date-expiration{
@@ -151,4 +152,48 @@
     color: white;
     border: none;
     border-radius: 12px;
+}
+
+
+/* 
+sm: 640px
+md: 768px
+lg: 1024px
+xl: 1280px 
+*/
+
+/* @media (max-width: 768px) {
+
+    
+} */
+
+
+@media (max-width: 640px) {
+
+    .newtask-container{
+        background: #FAF9F7;
+        width: 700px;
+        height: 100vh;
+        padding-top: 14px;
+        
+        display: flex;
+        flex-flow: column;
+        text-align: center;
+
+        & h2{
+            font-size: 1.5em;
+        }
+
+        & p {
+            font-size: 1em;
+        }
+    }
+
+    .box-button{
+        margin-top: 18px;
+        display: flex;
+        justify-content: space-evenly;
+        gap: 18px;
+    }
+
 }
