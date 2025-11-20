@@ -1,8 +1,45 @@
 
 .button{
     width: 180px;
-    padding: 14px 8px;
+    height: 50px;
+    padding: 12px 8px;
 
     font-size: 1rem;
     font-weight: bold;
+
+    border-radius: 18px;
+}
+
+/* guardar, nueva tarea */
+.primary{
+    border: #C3C2C5;
+    color: #fff;
+    background-color: #8A9070;
+}
+.primary:hover{
+background-color: #7C815F;
+}
+
+.primary:active{
+background-color: #6F7452;
+}
+
+/* ver tareas, cancelar */
+.secundary{
+    border: #C3C2C5;
+    color: #fff;
+    background-color:#B6A297;
+}
+.secundary:hover{
+background-color: #A89387;
+}
+
+.secundary:active{
+background-color: #9C897F;
+}
+
+/* eliminar */
+
+.delete{
+
 }
