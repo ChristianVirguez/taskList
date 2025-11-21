@@ -4,7 +4,7 @@ import"./mainlayout.css"
 
 import { Header } from "../components/commun/header/Header"
 import { Content } from "../components/commun/content/Content"
-import { Footer } from "../components/commun/footer/Footer"
+// import { Footer } from "../components/commun/footer/Footer"
 import { Outlet } from "react-router";
 
 function MainLayout () {
@@ -15,7 +15,6 @@ function MainLayout () {
                 <Content>
                     <Outlet/>
                 </Content>
-                <Footer/>
             </div>
         </>
     )
