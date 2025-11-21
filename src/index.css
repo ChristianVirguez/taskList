@@ -3,8 +3,11 @@
   line-height: 1.5;
   font-weight: 400;
   color: black;
+}
 
-  
+html{
+  width: 100vw;
+  min-height: 100vh;
 }
 
 *, ::after, ::before{

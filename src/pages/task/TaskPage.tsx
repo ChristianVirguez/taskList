@@ -1,20 +1,23 @@
 
 import { useEffect, useState, type ChangeEvent } from "react"
 import "./taskpage.css"
+import { CardTask } from "../../components/ui/cardTask/CardTask"
 
 type Task = {
     title: string
-    description?: string
+    description: string
     expiration: string
-    state:string
+    state:boolean
     key: string
 }
 
 function Task(){
 
-    
+    // este estado permite capturar los datos alojados en localStorage
     const [listTask, setlistTask] = useState<Task[]>([])
+    // permite actulizar la lista de tareas cuando una se elimina
     const [cont,setCont] = useState(1)
+    // permite que demos un estado de pendiente o completada al hacer click en input de estado 
     const [done, setDone] = useState({state:"pending"})
 
     function handleChange(event:ChangeEvent<HTMLInputElement | HTMLTextAreaElement>){
@@ -55,59 +58,17 @@ function Task(){
             <div className="task-list-container">
                 <h1>Tus Tareas</h1>    
 
-                <table className="table-task-box">
-                    <tbody className="tbody-table">
+                <div className="table-task-box">
                         {
-                            listTask.map((t)=>{
-                                return <tr key={t.key} className="tr-table">
-                                    
-                                            <td className="td-info-task">
-                                                <div className="info-task-box">
-
-                                                    <h3><u>{t.title}</u></h3>
-                                                    <p>{t.description}</p>
-                                                    <p>{t.expiration}</p>
-                                                    <span className={t.state === "complete"? "complete": "pending"}> {t.state === "complete" ? "completada" : "pendiente"} </span>
-                                                </div>
-                                            </td>
-                                            
-                                            <td className="td-option">
-
-                                                <div className="cel-container">
-
-                                                    <button className="delete-botton" onClick={()=>{
-                                                        setCont(cont-localStorage.length)
-                                                        localStorage.removeItem(t.key)
-                                                    }}>
-                                                        borrar
-                                                    </button>
-                                                    
-                                                    <form  className="radio-container">
-                                                        <div className="radio-complete">
-                                                            <input type="radio" name="state" value="complete"  id="done" onChange={handleChange} onClick={()=>{
-                                                                done.state = "complete"
-                                                                t.state = done.state
-                                                            }}/>
-                                                            <span>Completada</span>
-                                                        </div> 
-                                                        <div className={done.state === "pending" ? "hiden" : "radio-pending"}>
-                                                            <input type="radio" name="state" value="pending" id="done" onChange={handleChange} onClick={()=>{
-                                                                done.state = "pending"
-                                                                t.state = done.state
-                                                            }}/>
-                                                            <span>Pendiente</span>
-                                                        </div>
-                                                    </form>
-                                                    
-                                                </div>
-                                            </td>
-                                        </tr>
+                            listTask.map(task=>{
+                                return <CardTask
+                                idTask={task.key}
+                                titleTask={task.title}
+                                descripcion={task.description}
+                                estado={task.state}/>
                             })
                         }
-                        
-                    </tbody>
-                </table>
-                <span className={localStorage.length> 0 ? "info" : "hiden"}> * Fomato de fecha corresponde a AA-MM-DD</span>
+                </div>
             </div>
         </>
     )

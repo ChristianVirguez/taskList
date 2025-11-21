@@ -1,133 +1,53 @@
 
 .task-list-container{
-    background: #FCFAF5;
-    width: 100%;
-    height: 100vh;
-    padding:12px 28px;
-    border-radius: 12px;
-
+    width: 100vw;
+    height: 100%;
+    
     display: flex;
-    flex-flow: column;
+    flex-direction: column;
     align-items: center;
-    font-size: 1.2rem;
 
 }
 
 .table-task-box{
-    /* background-color: red; */
+    width: 950px;
+    height: 100%;
+    padding: 18px;
+
     font-weight: bold;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-}
-
-.tr-table{
-    outline: 2px solid;
-    border-radius: 8px;
-}
-
-.tbody-table{
-    width: 700px;
-    display: flex;
-    flex-flow: column;
-    gap: 18px;
-}
-
-.tbody-table td{
-    padding: 18px;
-    flex-flow: column;
     align-items: center;
-    justify-content: space-evenly;
-    gap: 18px;
-}
 
-.td-info-task{
-    width: 450px;
-    border-right: 2px solid;
-}
-
-.info-task-box{
-    height: 200px;
-
-    display: flex;
-    flex-flow: column;
-    justify-content: space-between;
-}
-
-.info-task-box h3,
-.info-task-box p{
-    margin: 0;
-}
-
-.complete{
-    padding: 8px;
-    border-radius: 18px;
-    width: fit-content;
-    background-color: rgba(72, 255, 0, 0.404);
-    outline: 2px solid;
-}
-
-.pending{
-    margin: 4px;
-    text-align: center;
-    display: block;
-    border-radius: 18px;
-    width: 120px;
-    background-color: rgba(240, 253, 117, 0.767);
-    outline: 2px solid;
-}
-
-.cel-container{
-    width: 150px;
-    height: 200px;
-
-    display: flex;
-    flex-flow: column;
-    justify-content: space-around;
+    scrollbar-width:thin;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 
-.td-option{
-    width: 150px;
-}
+@media (max-width: 640px) {
 
-.delete-botton{
-    height: 40px;
-    width: 100px;
-    background-color: rgb(0, 153, 255);
-    color: white;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
+    h1{
+        margin: 0;
+    }
 
-    font-size: 1.2rem;
-    font-weight: bolder;
-}
+    .task-list-container{
+        padding:0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
 
+    .table-task-box{
+        width: 100vw;
+        height: max-content;
+        padding: 0;
+        scrollbar-width: thin;
+        overflow-y:auto;
+        overflow-x: hidden;
+    }
 
-.delete-botton:hover{
-    background-color: rgb(0, 103, 172);
-    color: white;
-    border: none;
-    border-radius: 12px;
-}
-
-.delete-botton:active{
-    background-color: rgb(0, 60, 100);
-    color: white;
-    border: none;
-    border-radius: 12px;
-}
-.radio-container{
-    display: flex;
-    flex-flow: column;
-    justify-content: space-between;
-    gap: 12px;
-}
-
-.hiden{
-    display: none;
-}
-
-.info{
-    padding: 4px;
+    
 }
