@@ -1,5 +1,4 @@
 .container-task{
-    aspect-ratio: 16 / 9;
     display: flex;
     align-items: center;
     
@@ -16,6 +15,7 @@
 table{
     border: 2px solid;
     width: 600px;
+    margin: 12px 0;
     height: 150px;
     background-color: #FEFEFE;
 
