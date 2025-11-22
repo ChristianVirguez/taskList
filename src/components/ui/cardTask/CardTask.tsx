@@ -6,9 +6,11 @@ interface CardTaskProps{
     titleTask:string
     descripcion:string
     estado:boolean
+    // 'stateChange' permite recibir la funcion 'changeStateTask' que declaramos en taskPage para manejar el estado de la tarea, debemos pasarle la propiedad dentro de los parametro de 'CardTask', asi podra pasar el valor que toma en 'taskPage' (stateChange=changeStateTask) al boton que finalmente reflejara el cambio de estado de la tarea.
+    stateChange: (key:string)=>void
 }
 
-function CardTask({idTask,titleTask,descripcion,estado}:CardTaskProps){
+function CardTask({idTask,titleTask,descripcion,estado,stateChange}:CardTaskProps){
 
 
         const pendant=  <div style={
@@ -38,9 +40,11 @@ function CardTask({idTask,titleTask,descripcion,estado}:CardTaskProps){
             }
         }><p style={{margin:'0',color:"#454D5D"}}>Completada</p></div>
 
+        
+        
     return(
         <div className="container-task" key={idTask}>
-            <table >
+            <table>
                 <thead>
                     <tr className='row-th'>
                         <th className='titleTask'>{titleTask}</th>
@@ -48,6 +52,13 @@ function CardTask({idTask,titleTask,descripcion,estado}:CardTaskProps){
                             <Button
                                 variant={'delete'}
                                 IdTask={idTask}
+                            />
+                            <Button
+                                variant={estado?'statePendat':'stateComplete'}
+                                IdTask={idTask}
+                                stateTask={estado}
+                                //! 'handleStateChange' es una propiedad declarada en el componente 'Button' que recibe el valor que toma 'stateChange' declarado en ''CardTas; que a su vez toma el valor de 'changeStateTask' declarada en TaskPage 
+                                handleStateChange={stateChange}
                             />
                         </th>
                     </tr>

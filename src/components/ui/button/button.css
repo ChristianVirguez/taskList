@@ -59,3 +59,45 @@ background-color: #9C897F;
         height: 25px;
     }
 }
+
+/* cambiar el estado de la tarea */
+
+.stateComplete{
+    width: 30px;
+    height: 30px;
+    border: none;
+    padding: 0;
+    background: transparent;
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    & img{
+        width: 25px;
+        height: 25px;
+    }
+}
+
+.statePendat{
+    width: 30px;
+    height: 30px;
+    border: none;
+    padding: 0;
+    background: transparent;
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    & img{
+        width: 25px;
+        height: 25px;
+    }
+}

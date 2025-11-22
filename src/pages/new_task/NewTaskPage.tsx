@@ -15,7 +15,7 @@ function NewTask(){
         event.preventDefault()
     }
 
-    const [task, setTask] = useState({title:"", description:"", expiration:"",state:"",key:"task-"+crypto.randomUUID()})
+    const [task, setTask] = useState({title:"", description:"", expiration:"",state:false,key:"task-"+crypto.randomUUID()})
 
     function handleChange(event:ChangeEvent<HTMLInputElement | HTMLTextAreaElement>){
 

@@ -29,7 +29,7 @@ table{
 
 .buttons-th{
 
-    width: 100px;
+    width: 150px;
 
     display: flex;
     justify-content:center;
@@ -46,6 +46,17 @@ table{
 .descriptionTask,
 .estateTask{
     padding: 4px 8px;
+}
+
+.pendant{
+    margin: 0;
+    background-color: #91ff87;
+    display: inline-block;
+
+    & p{
+        margin: 0;
+    }
+
 }
 
 
