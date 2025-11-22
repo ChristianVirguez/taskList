@@ -1,5 +1,5 @@
 
-import { useEffect, useState, type ChangeEvent } from "react"
+import { useEffect, useState} from "react"
 import "./taskpage.css"
 import { CardTask } from "../../components/ui/cardTask/CardTask"
 
@@ -17,25 +17,6 @@ function Task(){
     const [listTask, setlistTask] = useState<Task[]>([])
     // permite actulizar la lista de tareas cuando una se elimina
     const [cont,setCont] = useState(1)
-    // permite que demos un estado de pendiente o completada al hacer click en input de estado 
-    const [done, setDone] = useState({state:"pending"})
-
-    function handleChange(event:ChangeEvent<HTMLInputElement | HTMLTextAreaElement>){
-
-            const {name , value} = event.target
-            
-            const newDone={
-                ...done,
-                [name]:value
-            }
-    
-            setDone(newDone)
-
-            console.log(event);
-        }
-        
-
-
     
     useEffect(()=>{
         
@@ -45,7 +26,10 @@ function Task(){
         const task:Task[]= key.map((k)=> JSON.parse(localStorage.getItem(k) as string));
         setlistTask(task);
 
-        
+        if(task.length > 0){
+            setCont(cont - task.length)
+        }
+
         
     },[cont])
     
@@ -65,7 +49,8 @@ function Task(){
                                 idTask={task.key}
                                 titleTask={task.title}
                                 descripcion={task.description}
-                                estado={task.state}/>
+                                estado={task.state}
+                                />
                             })
                         }
                 </div>

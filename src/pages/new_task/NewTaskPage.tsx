@@ -41,6 +41,7 @@ function NewTask(){
         }else{
             alert("complete los campos obligatorios para continuar")
         }
+
     }
 
 

@@ -4,17 +4,10 @@
     
 }
 
-/* .container-task:first-child:hover{
-    margin: 50px 0;
-}
-
-.container-task:last-child{
-    margin-bottom: 160px;
-} */
 
 table{
     border: 2px solid;
-    width: 600px;
+    width: 750px;
     margin: 12px 0;
     height: 150px;
     background-color: #FEFEFE;
@@ -25,9 +18,21 @@ table{
 
 }
 
+.row-th{
+    display: flex;
+    justify-content: space-around;
+}
+
+.titleTask{
+    width: 80%;
+}
+
 .buttons-th{
-    background-color: lightgreen;
-    width: 200px;
+
+    width: 100px;
+
+    display: flex;
+    justify-content:center;
 }
 .container-task:hover{
     margin: 12px 0;
@@ -37,6 +42,12 @@ table{
     transform:scale(1.2);
     animation: transform .5s ease-out;
 }
+
+.descriptionTask,
+.estateTask{
+    padding: 4px 8px;
+}
+
 
 
 
