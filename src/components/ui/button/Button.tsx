@@ -61,12 +61,12 @@ function Button({children,nav,IdTask,variant,handleStateChange}:propsButton){
                             <img src="src/assets/images/trash-bin-delete-svgrepo-com.svg" alt="" />
                         </button>
 
-            case 'stateComplete':
+            case 'statePendat':
                 return <button className="button stateComplete" onClick={handleState}>
                             <img src="src/assets/images/like-svgrepo-com.svg" alt="" />
                         </button>
 
-            case 'statePendat':
+            case 'stateComplete':
                 return <button className="button statePendat" onClick={handleState}>
                             <img src="src/assets/images/unlike-svgrepo-com.svg" alt="" />
                         </button>

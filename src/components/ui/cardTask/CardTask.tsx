@@ -50,15 +50,15 @@ function CardTask({idTask,titleTask,descripcion,estado,stateChange}:CardTaskProp
                         <th className='titleTask'>{titleTask}</th>
                         <th className='buttons-th'>
                             <Button
-                                variant={'delete'}
-                                IdTask={idTask}
-                            />
-                            <Button
                                 variant={estado?'statePendat':'stateComplete'}
                                 IdTask={idTask}
                                 stateTask={estado}
                                 //! 'handleStateChange' es una propiedad declarada en el componente 'Button' que recibe el valor que toma 'stateChange' declarado en ''CardTas; que a su vez toma el valor de 'changeStateTask' declarada en TaskPage 
                                 handleStateChange={stateChange}
+                            />
+                            <Button
+                                variant={'delete'}
+                                IdTask={idTask}
                             />
                         </th>
                     </tr>
