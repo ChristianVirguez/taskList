@@ -7,7 +7,11 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "docker:build": "docker build -t laboratorio-6:cvs .",
+    "docker:tag": "docker tag laboratorio-6:cvs cvirguez/laboratorio-6:cvs",
+    "docker:push":"docker push cvirguez/laboratorio-6:cvs",
+    "docker:deploy": "npm run docker:build && npm run docker:tag && npm run docker:push"
   },
   "dependencies": {
     "react": "^19.1.1",
