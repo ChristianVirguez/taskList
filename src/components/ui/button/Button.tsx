@@ -8,7 +8,7 @@ interface propsButton{
     onClick?: ()=>void
     variant:string
     nav?:string
-    IdTask:string
+    IdTask?:string
     stateTask?:boolean
     // finalmente 'handleStateChange' me permite manejar el estado de la tarea, el boton recibe la el valor que hay en 'stateChange' declarada en el componente 'cardTask' y lo usa para ejecutar la logica al hacer un click
     handleStateChange?: (key:string)=>void
@@ -39,7 +39,9 @@ function Button({children,nav,IdTask,variant,handleStateChange}:propsButton){
 
     // manejo el estado de la tarea 
         const handleState= ()=>{
-            handleStateChange?.(IdTask)
+            if (IdTask !== undefined) {
+                handleStateChange?.(IdTask)
+            }
         }
 
 
@@ -57,7 +59,7 @@ function Button({children,nav,IdTask,variant,handleStateChange}:propsButton){
 
             case 'delete':
 
-                return <button className="button delete" onClick={()=>{deleteTask(IdTask)}}>
+                return <button className="button delete" onClick={() => { if (IdTask) deleteTask(IdTask); }}>
                             <img src="src/assets/images/trash-bin-delete-svgrepo-com.svg" alt="" />
                         </button>
 
