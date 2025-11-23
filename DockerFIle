@@ -1,17 +1,19 @@
+FROM node:22 AS construccion
 
-FROM node:22 AS build
+WORKDIR /app
 
-WORKDIR /home/taskList_Front
-
-COPY ./ /home/proyecto_taskList
+COPY package*.json ./
 
 RUN npm install
+
+COPY . ./
+
 RUN npm run lint
 RUN npm run build
 
-FROM nginx AS publish
+FROM nginx:alpine AS empaquetado
 
-WORKDIR /usr/proyecto_taskList/nginx/html
+WORKDIR /usr/share/nginx/html
 
-COPY --from=build /home/proyecto_taskList/taskList_front/dist .
+COPY --from=construccion /app/dist .
 
